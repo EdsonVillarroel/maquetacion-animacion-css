@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/tablet.css" media="(max-width: 900px)"/>
+    <link rel="stylesheet" href="./style/phone.css" media="(max-width: 580px)"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Main Content -->
+      <section class="container">
+        <nav class="navbar">
+          <div class="navbar-content">
+            <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" />
+            <ul>
+              <li><a href="/">Exclusivos</a></li>
+              <li><a href="/">NUevos</a></li>
+              <li><a href="/">Gift cards</a></li>
+              <li><a href="/">Find store</a></li>
+            </ul>
+            <a class="toggle-menu">Menu</a>
+          </div>
+        </nav>
+
+        <section class="main-content">
+          <p>Diseña tu</p>
+          <h1>Súper Héroe!</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            error, vel tenetur facilis ab natus minima exercitationem voluptatum
+            explicabo quisquam accusantium autem, iste cupiditate, maiores
+            dignissimos itaque ipsam illo! Sint.
+          </p>
+        </section>
+        <section class="side-content">
+          <div></div>
+          <p>Superman</p>
+          <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="superman" />
+        </section>
+
+        <section class="footer">
+          <div id="button1">
+            <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman" />
+
+          </div>
+          <div id="button2">
+            <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin" />
+          </div>
+          <div id="button3">
+            <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman" />
+
+          </div>
+        </section>
+      </section>
+      <!-- Loader -->
+      <section class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <!-- Modal -->
+      <section class="modal hidden">
+        <div class="modal-content">
+            <img class="modal-content-close" src="https://img.icons8.com/windows/32/000000/macos-close.png" alt="icon cerrar">
+            <div class="modal-content-slider">
+                <input type="radio" name="slider-1" id="radio-1" checked>
+                <input type="radio" name="slider-1" id="radio-2">
+                <input type="radio" name="slider-1" id="radio-3">
+                <div class="cards">
+                    <!-- <label for="radio-1" id="card-1" class="card">
+                        <img src="./assets/spidey-1.png" alt="spiderman 1"/>
+                    </label>
+                    <label for="radio-2" id="card-2" class="card">
+                        <img src="./assets/spidey-2.png" alt="spiderman 2"/>
+                    </label>
+                    <label for="radio-3" id="card-3" class="card">
+                        <img src="./assets/spidey-3.png" alt="spiderman 3"/>
+                    </label> -->
+                </div>
+            </div>
+            <button class="button-red">Lo quiero!</button>
+        </div>
+    </section>
+    </div>
+  </body>
+  <script>
+       const modal = document.querySelector('.modal');
+    const buttonSpidey = document.querySelector('#button3');
+    const buttonBatman = document.querySelector('#button1');
+    const buttonRobin = document.querySelector('#button2');
+    const closeButton = document.querySelector('.modal-content-close');
+
+    const cards = document.querySelector('.cards');
+    buttonBatman.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('visible');
+        cards.innerHTML = `
+        <label for="radio-1" id="card-1" class="card">
+            <img src="./assets/spider-man-1.png" alt="spiderman 1"/>
+        </label>
+        <label for="radio-2" id="card-2" class="card">
+            <img src="./assets/spider-man-2.png" alt="spiderman 2"/>
+        </label>
+        <label for="radio-3" id="card-3" class="card">
+            <img src="./assets/spider-man-3.png" alt="spiderman 3"/>
+        </label>
+        `;
+    });
+    buttonRobin.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('visible');
+        cards.innerHTML = `
+        <label for="radio-1" id="card-1" class="card">
+            <img src="./assets/images/spidey-1.png" alt="spiderman 1"/>
+        </label>
+        <label for="radio-2" id="card-2" class="card">
+            <img src="./assets/images/spidey-2.png" alt="spiderman 2"/>
+        </label>
+        <label for="radio-3" id="card-3" class="card">
+            <img src="./assets/images/spidey-3.png" alt="spiderman 3"/>
+        </label>
+        `;
+    });
+    buttonSpidey.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('visible');
+        cards.innerHTML = `
+        <label for="radio-1" id="card-1" class="card">
+            <img src="./assets/images/spidey-1.png" alt="spiderman 1"/>
+        </label>
+        <label for="radio-2" id="card-2" class="card">
+            <img src="./assets/images/spidey-2.png" alt="spiderman 2"/>
+        </label>
+        <label for="radio-3" id="card-3" class="card">
+            <img src="./assets/images/spidey-3.png" alt="spiderman 3"/>
+        </label>
+        `;
+    });
+    closeButton.addEventListener('click', () => {
+        // modal.style.display = 'none';
+
+        modal.classList.remove('visible');
+        modal.classList.add('hidden');
+        cards.innerHTML = `
+        <label for="radio-1" id="card-1" class="card">
+            <img src="./assets/images/spidey-1.png" alt="spiderman 1"/>
+        </label>
+        <label for="radio-2" id="card-2" class="card">
+            <img src="./assets/images/spidey-2.png" alt="spiderman 2"/>
+        </label>
+        <label for="radio-3" id="card-3" class="card">
+            <img src="./assets/images/spidey-3.png" alt="spiderman 3"/>
+        </label>
+        `;
+    });
+  </script>
+</html>
